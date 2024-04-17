@@ -1,4 +1,4 @@
-name: First Workflow
+nname: First Workflow
 on: [push]
 jobs:
     run-shell-commands:
@@ -10,4 +10,4 @@ jobs:
               run: |
                 node -v
                 npm -v
-                python -v
+                python --version
