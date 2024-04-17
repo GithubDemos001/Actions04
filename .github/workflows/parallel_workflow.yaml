@@ -1,0 +1,34 @@
+name: First Workflow
+on: [push]
+jobs:
+    run-shell-commands:
+        runs-on: ubuntu-latest
+        steps:
+            - name: echo name
+              run: echo "Name"
+            - name: Multiline Command
+              run: |
+                node -v
+                npm -v
+                python --version
+    run-parallel-job:
+      runs-on: macos-latets
+      steps:
+        - name: View SW Version
+          run: sw_vers
+    run-third-parllel-job:
+      runs-on: ubuntu-latest
+      steps:
+        - name: echo again
+          run: echo "Sh says Hi!!!"
+    run-fouth-job-seq:
+      runs-on: windows-latest
+      needs: run-shell-commands
+      steps:
+        - name: echo a string
+          run: Write-Output "Windows String!!!!"
+        - name: Error Step
+          run: doesntexits
+
+
+    
