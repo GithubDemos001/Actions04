@@ -12,7 +12,7 @@ jobs:
                 npm -v
                 python --version
     run-parallel-job:
-      runs-on: macos-latets
+      runs-on: macos-latest
       steps:
         - name: View SW Version
           run: sw_vers
