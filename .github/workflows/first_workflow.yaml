@@ -5,7 +5,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: echo name
-              run: echoooo "Name"
+              run: echooo "Name"
             - name: Multiline Command
               run: |
                 node -v
